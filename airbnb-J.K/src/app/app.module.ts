@@ -7,6 +7,8 @@ import { HeaderBarComponent } from './components/header-bar/header-bar.component
 import { BodyCatalogComponent } from './components/body-catalog/body-catalog.component';
 import { BodyCardComponent } from './components/body-card/body-card.component';
 
+import {HttpClientModule} from '@angular/common/http';
+
 @NgModule({
   declarations: [
     AppComponent,
@@ -16,7 +18,8 @@ import { BodyCardComponent } from './components/body-card/body-card.component';
   ],
   imports: [
     BrowserModule,
-    AppRoutingModule
+    AppRoutingModule,
+    HttpClientModule
   ],
   providers: [],
   bootstrap: [AppComponent]
