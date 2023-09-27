@@ -1,1 +1,80 @@
 /* You can add global styles to this file, and also import other style files */
+* {
+    margin: 0;
+    padding: 0;
+}
+
+h1 {
+    font-size: 1rem;
+    font-weight: normal;
+    font-family: 'airbnbcereal_w_bkregular';
+}
+
+
+@font-face {
+    font-family: 'airbnbcereal_w_bdbold';
+    src: url('./assets/fonts/airbnbcereal_w_bd-webfont.woff2') format('woff2'),
+         url('./assets/fonts/airbnbcereal_w_bd-webfont.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+}
+
+
+
+
+@font-face {
+    font-family: 'airbnbcereal_w_bkregular';
+    src: url('./assets/fonts/airbnbcereal_w_bk-webfont.woff2') format('woff2'),
+         url('./assets/fonts/airbnbcereal_w_bk-webfont.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+
+}
+
+
+
+
+@font-face {
+    font-family: 'airbnbcereal_w_bluploadedfile';
+    src: url('./assets/fonts/airbnbcereal_w_blk-webfont.woff2') format('woff2'),
+         url('./assets/fonts/airbnbcereal_w_blk-webfont.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+
+}
+
+
+
+
+@font-face {
+    font-family: 'airbnbcereal_w_ltuploadedfile';
+    src: url('./assets/fonts/airbnbcereal_w_lt-webfont.woff2') format('woff2'),
+         url('./assets/fonts/airbnbcereal_w_lt-webfont.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+
+}
+
+
+
+
+@font-face {
+    font-family: 'airbnbcereal_w_mduploadedfile';
+    src: url('./assets/fonts/airbnbcereal_w_md-webfont.woff2') format('woff2'),
+         url('./assets/fonts/airbnbcereal_w_md-webfont.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+
+}
+
+
+
+
+@font-face {
+    font-family: 'airbnbcereal_w_xbuploadedfile';
+    src: url('./assets/fonts/airbnbcereal_w_xbd-webfont.woff2') format('woff2'),
+         url('./assets/fonts/airbnbcereal_w_xbd-webfont.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+
+}
