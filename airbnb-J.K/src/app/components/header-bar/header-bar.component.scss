@@ -5,17 +5,26 @@
     height: 5rem;
 
     .logo-container {
-        background-color: red;
         display: flex;
+        background-color: red;
+        width: 100%;
+        height: 5rem;
+
     }
 
     .search-bar-container {
-        background-color: orange;
+        width: 100%;
+        height: 5rem;
         display: flex;
+        background-color: orange;
     }
 
     .account-bar-container {
-        background-color: green;
+        
+        width: 100%;
+        height: 5rem;
         display: flex;
+        background-color: green;
+
     }
 }
