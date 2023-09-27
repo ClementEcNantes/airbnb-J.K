@@ -1,4 +1,4 @@
-export interface Logmeent {
+export interface Logement {
     id: number;
     city: {
         zipCode: number;
@@ -7,6 +7,4 @@ export interface Logmeent {
     prix: number;
     rating: number;
     favourite: boolean;
-    
-    
 }
