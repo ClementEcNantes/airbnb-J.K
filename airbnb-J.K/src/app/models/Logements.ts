@@ -1,10 +1,9 @@
 export interface Logement {
     id: number;
-    city: {
-        zipCode: number;
-        name: string;    
-    };
-    prix: number;
+    city_zipCode: number;
+    city_name: string;
+    price: number;
     rating: number;
     favourite: boolean;
+    image: string;
 }
