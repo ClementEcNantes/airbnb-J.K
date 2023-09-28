@@ -18,6 +18,8 @@ export class BodyCardComponent implements OnInit {
   favourite:boolean;
   name:string;
   id:number;
+
+  formattedRating: string;
   
 
   imageWithPrefix: string;
@@ -27,6 +29,7 @@ export class BodyCardComponent implements OnInit {
     // Concaténer le préfixe "data:image/jpeg;base64," avec le string d'encodage de l'image
     this.imageWithPrefix = "data:image/jpeg;base64," + this.accomodation.image;
     this.backgroundSize = 'cover'; // Définissez la valeur de backgroundSize ici
+    this.formattedRating = this.accomodation.rating.toLocaleString('fr-FR', { maximumFractionDigits: 1 });
   }  
 
 }
