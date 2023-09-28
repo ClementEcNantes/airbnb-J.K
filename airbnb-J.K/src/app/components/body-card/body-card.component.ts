@@ -21,10 +21,12 @@ export class BodyCardComponent implements OnInit {
   
 
   imageWithPrefix: string;
+  backgroundSize: string;
 
   ngOnInit(): void {
     // Concaténer le préfixe "data:image/jpeg;base64," avec le string d'encodage de l'image
     this.imageWithPrefix = "data:image/jpeg;base64," + this.accomodation.image;
+    this.backgroundSize = 'cover'; // Définissez la valeur de backgroundSize ici
   }  
 
 }

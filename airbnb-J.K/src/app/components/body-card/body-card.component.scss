@@ -41,7 +41,6 @@
                         fill: green; /* Remplacez "green" par la couleur souhaitée pour le remplissage lorsque le paramètre est vrai */
                     }
                     
-                    
                 }
             }
     
@@ -49,12 +48,13 @@
                 display: flex;
                 justify-content: center;
                 align-items: center;
-
-                .thumbnail-image {
-                    z-index: 1;
-                    width: 35rem;
-                    object-position: center center;
-                }
+                overflow: hidden;
+                position: relative;
+                background-repeat: no-repeat;
+                background-position: center center;
+                background-size: cover; /* Remplit la div en redimensionnant l'image */
+                width: 100%;
+                height: 100%;
             }
         }
     
