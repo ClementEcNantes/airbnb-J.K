@@ -1,95 +1,169 @@
-/* Définition de la variable CSS */
-
-
 /* Styles pour l'élément .header-bar */
 .header-bar {
   display: flex;
   height: 5rem;
   justify-content: center;
   align-items: center;
-
-
+  padding-left: 5%; /* Ajouter un espace à gauche */
+  padding-right: 5%; /* Ajouter un espace à droite */
   /* Styles pour l'élément .logo-container */
-.logo-container {
+  .logo-container {
     justify-content: flex-start;
     align-items: center;
     width: 30%;
     display: flex;
-    background-color: red;
+    // background-color: red;
     height: 5rem;
 
-    .logo{
-    align-items: center;
-    height: 50%;
+    .logo {
+      align-items: center;
+      height: 50%;
+    }
   }
-}
 
   /* Styles pour l'élément .search-bar-container */
   .search-bar-container {
-
-    border:1px solid #000000;
+    border: 1px solid  #000000;
+    width: 30%;
     height: 60%;
     border-radius: 40px;
     cursor: pointer;
     justify-content: center;
     align-items: center;
-
     transition: box-shadow 0.3s;
     padding-inline-start: 1rem;
     padding-inline-end: 1rem;
-
     display: flex;
     align-items: center;
-    justify-content: center;
+    justify-content: space-between;
+    justify-content: space-evenly;
 
-    width: 30%;
-    // height: 5rem
+    // justify-content: flex-end; /* Coller la loupe à droite */
+
+  .localisation-input{
+
+    padding: 5 20px;
+    background-color: transparent;
+    width: 2%;
+    border: none;
+    outline: none; /* Supprimer la bordure (outline) au clic */
+    }
     .date-input{
-        padding: 0 10px;
-        background-color: transparent;
-        width: 20%;
-        justify-content: space-evenly;
-        border: none;
-        border-right: 1px solid black;
-        outline: none; /* Supprimer la bordure (outline) au clic */
+
+      justify-content: space-between;
+      background-color: transparent;
+      padding: 5 20px;  
+      width: 20%;
+
+      border-right: 1px solid  #000000; 
+      outline: none; /* Supprimer la bordure (outline) au clic */
+
+    }
+    .localisation-input {
+      // padding: 0 10px;
+      background-color: transparent;
+      width: 20%;
+      border: none;
+      outline: none; /* Supprimer la bordure (outline) au clic */
+    }
+    .localisation-input {
+      
+      padding: 0 10px;
+      background-color: transparent;
+      width: 25%;
+      justify-content: space-evenly;
+      border: none;
+      border-right: 1px solid black;
+      outline: none; /* Supprimer la bordure (outline) au clic */
     }
 
-    .localisation-input{
+    .voyageurs-input {
+      display: flex;
+      align-items: center;
+
+      .ajout-input {
         padding: 0 10px;
         background-color: transparent;
-        width: 20%;
-        justify-content: space-evenly;
+        width: 90%;
         border: none;
-        border-right: 1px solid black;
         outline: none; /* Supprimer la bordure (outline) au clic */
-    }
+      }
 
-    .voyageurs-input{
+      .round-container {
         display: flex;
-        padding: 0 10px;
-        background-color: transparent;
-        width: 50%;
-        justify-content: space-evenly;
-        border: none;
-        outline: none; /* Supprimer la bordure (outline) au clic */
+        align-items: center;
+        position: relative;
+        width: 10%;
 
- 
+        .little-loupe {
+          display: flex;
+          align-content: flex-end;
+          width: 12px;
+          position: absolute;
+          right: 8px;
+          z-index: 2;
+        }
+
+        .round-outline {
+          display: flex;
+          align-content: flex-end;
+          width: 30px;
+          height: 30px;
+          background-color: #ff385c;
+          border-radius: 50%;
+          position: absolute;
+          right: 0;
+          z-index: 1;
+        }
+      }
     }
   }
-  
   /* Styles pour l'élément .account-bar-container */
   .account-bar-container {
-    width: 30%;
-    height: 5rem;
+    width: 25%;
+    height: 3rem;
     display: flex;
-    background-color: green;
+    // background-color: green;
+    border: none;
+    outline: none;
+    background: none;
 
+    .account-input {
+      width: 100%;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+
+
+      // background-color: blue;
+      position: relative; /* Position relative pour le pseudo-élément */
+      cursor: pointer;
+
+      /* Pseudo-élément pour l'effet de survol */
+      &::before {
+        content: ""; /* Contenu vide pour le pseudo-élément */
+        position: absolute;
+        top: 0;
+        right: 0;
+        bottom: 0;
+        left: 0;
+        border: 1px solid #ff385c; /* Couleur de la bordure */
+        border-radius: 40px; /* Pour créer une forme circulaire */
+        background-color: rgba(255, 56, 92, 0.2); /* Couleur de fond avec transparence */
+        z-index: -1; /* Placez le pseudo-élément en arrière-plan */
+        opacity: 0; /* Masquez-le initialement */
+        transition: opacity 0.3s; /* Transition d'opacité */
+
+      }
+    }
+
+    .account-input:hover::before {
+      opacity: 1; /* Affichez le pseudo-élément lors du survol */
+      
+    }
   }
-  
 }
-
+/* Style pour l'effet de survol global sur .search-bar-container */
 .search-bar-container:hover {
   box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.4);
 }
-
-
