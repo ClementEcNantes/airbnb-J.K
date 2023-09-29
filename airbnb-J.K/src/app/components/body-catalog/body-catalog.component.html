@@ -1,9 +1,7 @@
 <div class="body-container">
-    <div class="cards-container">
-        <ng-container *ngIf="cards$ | async as cards">
-            <div *ngFor="let card of cards" class="card-item">
-                <h1>{{card.id}}</h1>
-            </div>
-        </ng-container>
-    </div>
+    <ng-container *ngIf="cards$ | async as cards">
+        <div class="cards-container" *ngFor="let card of cards" class="card-item">
+            <app-body-card [accomodation]="card"></app-body-card>
+        </div>
+    </ng-container>
 </div>

@@ -1,4 +1,7 @@
 .body-container {
     width: 100%;
-    background-color: purple;
+    display: flex;
+    background-color: white;
+    flex-wrap: wrap;
+    justify-content: center;
 }
