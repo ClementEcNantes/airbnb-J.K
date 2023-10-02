@@ -1,167 +1,247 @@
-/* Styles pour l'élément .header-bar */
-.header-bar {
-  display: flex;
-  height: 5rem;
-  justify-content: center;
-  align-items: center;
-  padding-left: 5%; /* Ajouter un espace à gauche */
-  padding-right: 5%; /* Ajouter un espace à droite */
+  /* Styles pour l'élément .header-bar */
+  .header-bar {
+    display: flex;
+    height: 5rem;
+    justify-content: space-evenly;
+    align-items: center;
+    padding: 0 5%;
+    border-bottom: #bdbbbb 1px solid;
+    // background-color: lightblue;
+  }
+
   /* Styles pour l'élément .logo-container */
   .logo-container {
-    justify-content: flex-start;
+    display: flex;
     align-items: center;
     width: 30%;
-    display: flex;
-    // background-color: red;
-    height: 5rem;
+    height: 100%;
+    // background-color: lightgreen;
+  }
 
-    .logo {
-      align-items: center;
-      height: 50%;
-    }
+  /* Styles pour l'élément .logo */
+  .logo {
+    display: flex;
+    // height: 50%;
+    margin-left: 0.6rem;
+    align-items: center;
+    // color: red;
   }
 
   /* Styles pour l'élément .search-bar-container */
+  .search-bar-space {
+    display: flex;
+    justify-content: center; /* Centrer horizontalement */
+    align-items: center; /* Centrer verticalement */
+    width: 40%;
+    height: 100%;
+    // background-color: red;
+    padding: 0 24px;
+
+  }
   .search-bar-container {
-    border: 1px solid  #000000;
-    width: 30%;
-    height: 60%;
+    display: flex;
+    justify-content: center; /* Centrer horizontalement */
+    align-items: center; /* Centrer verticalement */
+    width: 93.5%;
+    height: 58%;
+
+     border: 1px solid #bdbbbb;
     border-radius: 40px;
     cursor: pointer;
-    justify-content: center;
-    align-items: center;
     transition: box-shadow 0.3s;
-    padding-inline-start: 1rem;
-    padding-inline-end: 1rem;
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
-    justify-content: space-evenly;
 
-    // justify-content: flex-end; /* Coller la loupe à droite */
-
-  .localisation-input{
-
-    padding: 5 20px;
-    background-color: transparent;
-    width: 2%;
-    border: none;
-    outline: none; /* Supprimer la bordure (outline) au clic */
-    }
-    .date-input{
-
-      justify-content: space-between;
-      background-color: transparent;
-      padding: 5 20px;  
-      width: 20%;
-
-      border-right: 1px solid  #000000; 
-      outline: none; /* Supprimer la bordure (outline) au clic */
-
-    }
-    .localisation-input {
-      // padding: 0 10px;
-      background-color: transparent;
-      width: 20%;
-      border: none;
-      outline: none; /* Supprimer la bordure (outline) au clic */
-    }
-    .localisation-input {
-      
-      padding: 0 10px;
-      background-color: transparent;
-      width: 25%;
-      justify-content: space-evenly;
-      border: none;
-      border-right: 1px solid black;
-      outline: none; /* Supprimer la bordure (outline) au clic */
-    }
-
-    .voyageurs-input {
-      display: flex;
-      align-items: center;
-
-      .ajout-input {
-        padding: 0 10px;
-        background-color: transparent;
-        width: 90%;
-        border: none;
-        outline: none; /* Supprimer la bordure (outline) au clic */
-      }
-
-      .round-container {
-        display: flex;
-        align-items: center;
-        position: relative;
-        width: 10%;
-
-        .little-loupe {
-          display: flex;
-          align-content: flex-end;
-          width: 12px;
-          position: absolute;
-          right: 8px;
-          z-index: 2;
-        }
-
-        .round-outline {
-          display: flex;
-          align-content: flex-end;
-          width: 30px;
-          height: 30px;
-          background-color: #ff385c;
-          border-radius: 50%;
-          position: absolute;
-          right: 0;
-          z-index: 1;
-        }
-      }
-    }
+    // padding: 0 1rem;
+    // background-color: lightyellow;
   }
-  /* Styles pour l'élément .account-bar-container */
-  .account-bar-container {
-    width: 25%;
-    height: 3rem;
-    display: flex;
-    // background-color: green;
+
+  /* Styles pour les éléments .date-input, .localisation-input et .voyageur-input dans .search-bar-container */
+  .voyageur-input {
+    flex-grow: 1;
+    padding: 5px 20px;
     border: none;
     outline: none;
-    background: none;
-
-    .account-input {
-      width: 100%;
-      display: flex;
-      justify-content: center;
-      align-items: center;
-
-
-      // background-color: blue;
-      position: relative; /* Position relative pour le pseudo-élément */
-      cursor: pointer;
-
-      /* Pseudo-élément pour l'effet de survol */
-      &::before {
-        content: ""; /* Contenu vide pour le pseudo-élément */
-        position: absolute;
-        top: 0;
-        right: 0;
-        bottom: 0;
-        left: 0;
-        border: 1px solid #ff385c; /* Couleur de la bordure */
-        border-radius: 40px; /* Pour créer une forme circulaire */
-        background-color: rgba(255, 56, 92, 0.2); /* Couleur de fond avec transparence */
-        z-index: -1; /* Placez le pseudo-élément en arrière-plan */
-        opacity: 0; /* Masquez-le initialement */
-        transition: opacity 0.3s; /* Transition d'opacité */
-
-      }
-    }
-
-    .account-input:hover::before {
-      opacity: 1; /* Affichez le pseudo-élément lors du survol */
-      
-    }
+    position: relative;
+    background-color: white;
   }
+
+
+
+  /* Styles pour .date-input dans .search-bar-container */
+  .date-input {
+    width: 29.5%;
+    height: 47.43%;
+    // background-color: white;
+    border: none;
+    outline: none;
+    text-align: center;
+
+    border-left : 1px solid #717171;
+    border-right : 1px solid #717171 ;
+    // margin-right: 0.5rem;
+
+    position: relative; /* Nécessaire pour le positionnement des pseudo-éléments */
+
+    display : in line;
+  }
+
+  /* Styles pour .localisation-input dans .search-bar-container */
+  .localisation-input {
+    width: 28%;
+    height: 47.43%;
+    margin-left: 1.7rem;
+    background-color: white;
+    border: none;
+    outline: none;
+  }
+
+  /* Styles pour .voyageur-container */
+  /* Styles pour .voyageur-container */
+  .voyageur-container {
+    height: 100%;
+    width: 55%; /* Ajustez la largeur du noir selon vos besoins */
+    // background-color: rgb(16, 14, 161);
+    display: flex;
+    margin-right: 0.5rem;
+    align-items: center;
+  }
+
+  /* Styles pour .voyageur-input dans .voyageur-container */
+  .voyageur-input {
+    flex-grow: 1; /* La zone rose s'étend pour remplir l'espace noir */
+    // background-color: lightpink;
+    border: none;
+    outline: none;
+
+    width: 64%; /* 60% de la largeur du conteneur noir */
+    height: 25.8%;
+  }
+
+  /* Styles pour .petite-loupe-container */
+  .petite-loupe-container {
+    flex-grow: 1; /* La zone rose s'étend pour remplir l'espace noir */
+    height: 35px;
+    width: 35px; /* 60% de la largeur du conteneur noir */
+    border-radius: 50%;
+    background-color: #ff385c;
+    display: flex;
+    justify-content: center; /* Centrer horizontalement */
+    align-items: center; /* Centrer verticalement */
+  }
+
+  /* Styles pour .petite-loupe */
+  .petite-loupe {
+    margin-left: 0.2rem;
+    width: 16px;
+    height: 16px;
+    background-color: #ff385c;
+  }
+
+
+  /* Styles pour le premier séparateur */
+  .localisation-input::before {
+    left: 0;
+  }
+
+  /* Styles pour le deuxième séparateur */
+  .voyageur-input::before {
+    left: 0;
+  }
+
+  /* Styles pour l'élément .account-bar-container */
+  /* Styles pour l'élément .account-bar-container */
+.account-bar-container {
+  width: 30%;
+  height: 100%;
+  display: flex;
+  align-items: center;
+  // background-color: lightgray;
+}
+
+/* Styles pour .account-input dans .account-bar-container */
+.account-input {
+  width: 75%;
+  height: 60%;
+  display: flex;
+  align-items: center; /* Centrer verticalement */
+}
+
+/* Styles pour .account-input-texte dans .account-input */
+.account-input-texte-container {
+  width: 79%;
+  height: 88%;
+  margin-left: 0.2rem;
+  display: flex; /* Ajout de display: flex; pour centrer le texte */
+  justify-content: center; /* Centrer horizontalement */
+  align-items: center; /* Centrer verticalement */
+}
+
+.account-input-texte {
+  width: 95%;
+  height: 38%;
+  margin-left: 0.2rem;
+  font-family: "airbnbcereal_w_bdbold";
+  font-weight: bolder;
+  font-weight: 700;
+
+  text-align: center;
+  display: inline;
+}
+
+.little-planete-container{
+  width: 46px;
+  height: 42px;
+  display: flex; /* Ajout de display: flex; pour centrer le texte */
+  justify-content: center; /* Centrer horizontalement */
+  align-items: center; /* Centrer verticalement */
+}
+
+/* Styles pour .barre-right-side */
+.barre-right-side {
+  width: 20%;
+  height: 51%;
+
+  display: flex;
+  align-items: center; /* Centrer verticalement */
+  justify-content:space-evenly; /* Espacement équitable entre les éléments enfants */
+
+  border: 1px solid #717171;
+  border-radius: 40px;
+  cursor: pointer;
+  transition: box-shadow 0.3s;
+
+  // padding: 0 1rem;
+  // background-color: white;
+}
+
+/* Styles pour .listitem */
+.listitem {
+  display: flex;
+  align-items: center;
+  // align-items: flex-start;
+}
+
+/* Styles pour .petitepersonne */
+.petitepersonne {
+  display: flex;
+  align-items: center;
+  // align-items: flex-end;
+}
+
+/* Styles pour l'effet de survol de .account-input-texte */
+.account-input-texte-container:hover {
+  border-radius: 30px;
+  transition: box-shadow 0.3s;
+  box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.4);
+}
+.little-planete-container:hover {  
+  box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.4);
+  transition: box-shadow 0.3s;
+  border-radius: 30px;
+}
+.barre-right-side:hover{
+  box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.4);
+  transition: box-shadow 0.3s;
+  border-radius: 30px;
 }
 /* Style pour l'effet de survol global sur .search-bar-container */
 .search-bar-container:hover {

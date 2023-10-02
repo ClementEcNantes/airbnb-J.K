@@ -1,42 +1,71 @@
 <div class="header-bar">
   <div class="logo-container">
-    <img src="../../../assets/img/airbnb-logo.png" class="logo" />
+    <img
+      src="../../../assets/img/airbnb-logo-text.svg"
+      class="logo"
+      width="102"
+      height="32"
+    />
   </div>
-  <div class="search-bar-container">
-    <input
-      type="text"
-      class="date-input"
-      placeholder="N'importe où"
-      maxlength="6"
-    />
-    <input
-      type="text"
-      class="date-input"
-      placeholder="Une semaine"
-      maxlength="6"
-    />
-    <div class="vertical-bar"></div> <!-- Barre verticale ajoutée ici -->
-    <div class="voyageurs-input">
+
+  <div class="search-bar-space">
+    <div class="search-bar-container">
       <input
         type="text"
-        class="ajout-input"
-        placeholder="Ajouter des voyageurs"
-        maxlength="6"
+        class="localisation-input"
+        placeholder="N'importe où"
+        disabled="disabled"
       />
-      <div class="round-container">
-        <div class="round-outline"></div>
-        <img src="../../../assets/img/petite loupe.svg" class="little-loupe" />
+      <input type="text" class="date-input" placeholder="Une semaine"  />
+      <div class="voyageur-container">
+        <input
+          type="text"
+          class="voyageur-input"
+          placeholder="Ajouter des voyageurs"
+          disabled="disabled"
+        />
+        <div class="petite-loupe-container">
+          <div class="petite-loupe">
+            <img src="../../../assets/img/petite loupe.svg" alt="Loupe" />
+          </div>
+        </div>
       </div>
     </div>
   </div>
   <div class="account-bar-container">
     <div class="account-input">
-      <input
-        class="account-input-texte"
-        type="text"
-        size="25"
-        placeholder="Mettre mon logement sur Airbnb"
-        style="border: none !important; outline: none; background: none;"
+      <div class="account-input-texte-container">
+        <input
+          class="account-input-texte"
+          type="text"
+          size="25"
+          placeholder="Mettre mon logement sur Airbnb"
+          style="border: none !important; outline: none; background: none"
+          disabled="disabled"
+        />
+      </div>
+      <div class="little-planete-container">
+        <img
+          src="../../../assets/img/planete petite.svg"
+          class="little-planete"
+          height="16"
+          width="16"
+        />
+        <div></div>
+      </div>
+    </div>
+    <div class="barre-right-side">
+      <img
+        src="../../../assets/img/listroisbarres.svg"
+        class="listitem"
+        height="16"
+        width="16"
+      />
+      <img
+        src="../../../assets/img/logoaccount.svg"
+        class="petitepersonne"
+        height="28.69"
+        width="28.69"
       />
     </div>
   </div>
