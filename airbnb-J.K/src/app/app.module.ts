@@ -8,13 +8,15 @@ import { BodyCatalogComponent } from './components/body-catalog/body-catalog.com
 import { BodyCardComponent } from './components/body-card/body-card.component';
 
 import {HttpClientModule} from '@angular/common/http';
+import { UnderheaderComponent } from './components/underheader/underheader.component';
 
 @NgModule({
   declarations: [
     AppComponent,
     HeaderBarComponent,
     BodyCatalogComponent,
-    BodyCardComponent
+    BodyCardComponent,
+    UnderheaderComponent
   ],
   imports: [
     BrowserModule,

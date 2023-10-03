@@ -1,0 +1,76 @@
+/* Styles pour le composant "underheader" (positionné en dessous de l'en-tête) */
+.scroll-container {
+  margin-left: 5%;
+  margin-right: 5%;
+  padding: 17px 3%;
+
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  overflow: hidden;
+  position: relative; /* Ajoutez ceci pour positionner les flèches */
+}
+
+/* Styles pour le composant de défilement (scroll) */
+.scroll-button {
+background-color: white;
+  color: black;
+  border: none;
+  padding: 10px 15px;
+  cursor: pointer;
+  font-size: 18px;
+  position: absolute; /* Position absolue pour les flèches */
+  top: 50%; /* Alignez les flèches verticalement au milieu */
+  transform: translateY(-50%); /* Ajustez la position verticale */
+}
+
+.scroll-left {
+  left: 0; /* Positionnez la flèche de défilement gauche à gauche */
+  border-top-left-radius: 5px;
+  border-bottom-left-radius: 5px;
+}
+
+.scroll-right {
+  right: 0; /* Positionnez la flèche de défilement droite à droite */
+  border-top-right-radius: 5px;
+  border-bottom-right-radius: 5px;
+}
+
+/* Styles pour la zone de défilement (conteneur) */
+.scroll-content {
+  flex-grow: 1;
+  overflow-x: hidden;
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+  min-width: 0;
+  position: relative; /* Ajoutez ceci pour positionner les flèches à l'intérieur */
+}
+.scroll-list {
+  display: flex;
+  padding: 0;
+  margin: 0;
+  flex-direction: row; /* Affiche les éléments horizontalement */
+  transition: transform 50s ease-in-out;
+}
+
+li {
+  flex: 0 0 auto;
+  width: calc(10%);
+  margin: 5px 6px;
+  display: flex;
+  flex-direction: column; /* Affiche les éléments en colonne */
+  align-items: center; /* Centre le contenu horizontalement */
+  text-align: center; /* Centre le texte horizontalement */
+}
+
+.item-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+}
+
+.item-text {
+  font-size: 12px; /* Taille de police plus petite */
+}

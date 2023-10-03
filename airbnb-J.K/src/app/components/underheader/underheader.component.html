@@ -1,0 +1,15 @@
+<div class="scroll-container">
+  <button class="scroll-button scroll-left" (click)="scrollLeft()">&#9664;</button>
+  <div class="scroll-content" #container>
+    <ul class="scroll-list" #content>
+      <!-- Vos éléments de défilement -->
+      <li *ngFor="let item of scrollItems">
+        <div class="item-container">
+          <img [src]="item.src" [width]="item.width" [height]="item.height">
+          <p class="item-text">planche</p>
+        </div>
+      </li>
+    </ul>
+  </div>
+  <button class="scroll-button scroll-right" (click)="scrollRight()">&#9654;</button>
+</div>
