@@ -1,5 +1,5 @@
 <div class="scroll-container">
-  <button class="scroll-button scroll-left" (click)="scrollLeft()">&#9664;</button>
+  <img class="scroll-button scroll-left" (click)="scrollLeft()" src="../../../assets/img/flèche gauche.svg" alt="Flèche Gauche" />
   <div class="scroll-content" #container>
     <ul class="scroll-list" #content>
       <!-- Vos éléments de défilement -->
@@ -11,5 +11,9 @@
       </li>
     </ul>
   </div>
-  <button class="scroll-button scroll-right" (click)="scrollRight()">&#9654;</button>
+  <img class="scroll-button scroll-right" (click)="scrollRight()" src="../../../assets/img/flèche droite.svg" alt="Flèche Droite" />
+  <div class="filtre">
+    <img src="../../../assets/img/filtre.svg" alt="filtre" />
+    <span class="filtre-text">Filtres</span>
+  </div>
 </div>
