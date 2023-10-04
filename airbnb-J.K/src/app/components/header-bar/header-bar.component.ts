@@ -10,19 +10,31 @@ import { Observable } from 'rxjs';
 export class HeaderBarComponent {
   searchTerm: string = '';
   communes: Commune[] = [];
-  selectedCity: Commune | null = null; // Initialisez selectedCity à null
-  villes$: Observable<Commune[]> | null = null; // Initialisez villes$ à null
+  selectedCity: Commune | null = null;
+  villes$: Observable<Commune[]> | null = null;
+  showSuggestions: boolean = false;
+  showCityList: boolean = false; // Nouvelle propriété pour afficher la liste de villes
 
   constructor(private apigouvService: ApigouvService) { }
 
-  public onSearch(event: KeyboardEvent): void {
+  public onSearch(event: Event): void {
     const searchTerm = (event.target as HTMLInputElement).value;
 
-    this.villes$ = this.apigouvService.searchCommunes(searchTerm); // Utilisez villes$ pour stocker les résultats de la recherche
-    this.selectedCity = null; // Réinitialisez selectedCity lorsque vous effectuez une nouvelle recherche
+    if (searchTerm.length >= 3) {
+      this.showSuggestions = true;
+      this.villes$ = this.apigouvService.searchCommunes(searchTerm);
+      this.showCityList = true; // Afficher la liste de villes lorsque la recherche est active
+    } else {
+      this.showSuggestions = false;
+      this.showCityList = false; // Masquer la liste de villes lorsque la recherche est vide
+    }
+
+    this.selectedCity = null;
   }
 
   public onCityClick(ville: Commune): void {
-    this.selectedCity = ville; // Mettez à jour selectedCity lorsque l'utilisateur clique sur une ville
+    this.selectedCity = ville;
+    this.showSuggestions = false;
+    this.showCityList = false; // Masquer la liste de villes lorsque vous cliquez sur une ville
   }
 }

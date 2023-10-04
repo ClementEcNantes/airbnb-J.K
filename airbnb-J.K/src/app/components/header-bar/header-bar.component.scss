@@ -1,252 +1,287 @@
-  /* Styles pour l'élément .header-bar */
-  .header-bar {
-    display: flex;
-    height: 5rem;
-    justify-content: space-evenly;
-    align-items: center;
-    padding: 0 5%;
-    border-bottom: #bdbbbb 1px solid;
-    // background-color: lightblue;
-  }
+/* Styles pour l'élément .header-bar */
+.header-bar {
+  display: flex;
+  height: 5rem;
+  justify-content: space-evenly;
+  align-items: center;
+  padding: 0 5%;
+  border-bottom: #bdbbbb 1px solid;
+  // background-color: lightblue;
+}
 
-  /* Styles pour l'élément .logo-container */
-  .logo-container {
-    display: flex;
-    align-items: center;
-    width: 30%;
-    height: 100%;
-    // background-color: lightgreen;
-  }
-
-  /* Styles pour l'élément .logo */
-  .logo {
-    display: flex;
-    // height: 50%;
-    margin-left: 0.6rem;
-    align-items: center;
-    // color: red;
-  }
-
-  /* Styles pour l'élément .search-bar-container */
-  .search-bar-space {
-    display: flex;
-    justify-content: center; /* Centrer horizontalement */
-    align-items: center; /* Centrer verticalement */
-    width: 40%;
-    height: 100%;
-    // background-color: red;
-    padding: 0 24px;
-
-  }
-  .search-bar-container {
-    display: flex;
-    justify-content: center; /* Centrer horizontalement */
-    align-items: center; /* Centrer verticalement */
-    width: 93.5%;
-    height: 58%;
-
-     border: 1px solid #bdbbbb;
-    border-radius: 40px;
-    cursor: pointer;
-    transition: box-shadow 0.3s;
-
-    // padding: 0 1rem;
-    // background-color: lightyellow;
-  }
-
-  /* Styles pour les éléments .date-input, .localisation-input et .voyageur-input dans .search-bar-container */
-  .voyageur-input {
-    flex-grow: 1;
-    padding: 5px 20px;
-    border: none;
-    outline: none;
-    position: relative;
-    background-color: white;
-  }
-
-
-
-  /* Styles pour .date-input dans .search-bar-container */
-  .date-input {
-    width: 29.5%;
-    height: 47.43%;
-    // background-color: white;
-    border: none;
-    outline: none;
-    text-align: center;
-    background-color: white;
-    border-left : 1px solid #717171;
-    border-right : 1px solid #717171 ;
-    
-    // margin-right: 0.5rem;
-
-    position: relative; /* Nécessaire pour le positionnement des pseudo-éléments */
-
-    display : in line;
-  }
-
-  /* Styles pour .localisation-input dans .search-bar-container */
-  .localisation-input {
-    width: 28%;
-    height: 47.43%;
-    margin-left: 1.7rem;
-
-    font-weight: bold;
-    background-color: white;
-    border: none;
-    outline: none;
-  }
-
-  /* Styles pour .voyageur-container */
-  /* Styles pour .voyageur-container */
-  .voyageur-container {
-    height: 100%;
-    width: 55%; /* Ajustez la largeur du noir selon vos besoins */
-    // background-color: rgb(16, 14, 161);
-    display: flex;
-    margin-right: 0.5rem;
-    align-items: center;
-  }
-
-  /* Styles pour .voyageur-input dans .voyageur-container */
-  .voyageur-input {
-    flex-grow: 1; /* La zone rose s'étend pour remplir l'espace noir */
-    // background-color: lightpink;
-    border: none;
-    outline: none;
-
-    width: 64%; /* 60% de la largeur du conteneur noir */
-    height: 25.8%;
-  }
-
-  /* Styles pour .petite-loupe-container */
-  .petite-loupe-container {
-    flex-grow: 1; /* La zone rose s'étend pour remplir l'espace noir */
-    height: 35px;
-    width: 35px; /* 60% de la largeur du conteneur noir */
-    border-radius: 50%;
-    background-color: #ff385c;
-    display: flex;
-    justify-content: center; /* Centrer horizontalement */
-    align-items: center; /* Centrer verticalement */
-  }
-
-  /* Styles pour .petite-loupe */
-  .petite-loupe {
-    margin-left: 0.2rem;
-    width: 16px;
-    height: 16px;
-    background-color: #ff385c;
-  }
-
-
-  /* Styles pour le premier séparateur */
-  .localisation-input::before {
-    left: 0;
-  }
-
-  /* Styles pour le deuxième séparateur */
-  .voyageur-input::before {
-    left: 0;
-  }
-
-  /* Styles pour l'élément .account-bar-container */
-  /* Styles pour l'élément .account-bar-container */
-.account-bar-container {
-  width: 30%;
-  height: 100%;
+/* Styles pour l'élément .logo-container */
+.logo-container {
   display: flex;
   align-items: center;
-  // background-color: lightgray;
+  width: 30%;
+  height: 100%;
+  // background-color: lightgreen;
 }
 
-/* Styles pour .account-input dans .account-bar-container */
-.account-input {
-  width: 75%;
-  height: 60%;
+/* Styles pour l'élément .logo */
+.logo {
   display: flex;
-  align-items: center; /* Centrer verticalement */
+  // height: 50%;
+  margin-left: 0.6rem;
+  align-items: center;
+  // color: red;
 }
 
-/* Styles pour .account-input-texte dans .account-input */
-.account-input-texte-container {
-  width: 79%;
-  height: 88%;
-  margin-left: 0.2rem;
-  display: flex; /* Ajout de display: flex; pour centrer le texte */
+/* Styles pour l'élément .search-bar-container */
+.search-bar-space {
+  display: flex;
   justify-content: center; /* Centrer horizontalement */
   align-items: center; /* Centrer verticalement */
+  width: 40%;
+  height: 100%;
+  // background-color: red;
+  padding: 0 24px;
+
 }
-
-.account-input-texte {
-  width: 95%;
-  height: 38%;
-  margin-left: 0.2rem;
-  font-family: airbnbcereal_w_bdbold;
-  font-weight: bolder;
-  font-weight: 700;
-
-  text-align: center;
-  display: inline;
-}
-
-.little-planete-container{
-  width: 46px;
-  height: 42px;
-  display: flex; /* Ajout de display: flex; pour centrer le texte */
+.search-bar-container {
+  display: flex;
   justify-content: center; /* Centrer horizontalement */
   align-items: center; /* Centrer verticalement */
-}
+  width: 93.5%;
+  height: 58%;
 
-/* Styles pour .barre-right-side */
-.barre-right-side {
-  width: 20%;
-  height: 51%;
-
-  display: flex;
-  align-items: center; /* Centrer verticalement */
-  justify-content:space-evenly; /* Espacement équitable entre les éléments enfants */
-
-  border: 1px solid #717171;
+   border: 1px solid #bdbbbb;
   border-radius: 40px;
   cursor: pointer;
   transition: box-shadow 0.3s;
 
   // padding: 0 1rem;
+  // background-color: lightyellow;
+}
+
+/* Styles pour les éléments .date-input, .localisation-input et .voyageur-input dans .search-bar-container */
+.voyageur-input {
+  flex-grow: 1;
+  padding: 5px 20px;
+  border: none;
+  outline: none;
+  position: relative;
+  background-color: white;
+}
+
+
+
+/* Styles pour .date-input dans .search-bar-container */
+.date-input {
+  width: 29.5%;
+  height: 47.43%;
   // background-color: white;
+  border: none;
+  outline: none;
+  text-align: center;
+  background-color: white;
+  border-left : 1px solid #717171;
+  border-right : 1px solid #717171 ;
+  
+  // margin-right: 0.5rem;
+
+  position: relative; /* Nécessaire pour le positionnement des pseudo-éléments */
+
+  display : in line;
+}
+
+/* Styles pour .localisation-input dans .search-bar-container */
+.localisation-input {
+  width: 28%;
+  height: 47.43%;
+  margin-left: 1.7rem;
+
+  font-weight: bold;
+  background-color: white;
+  border: none;
+  outline: none;
+}
+
+/* Styles pour .voyageur-container */
+/* Styles pour .voyageur-container */
+.voyageur-container {
+  height: 100%;
+  width: 55%; /* Ajustez la largeur du noir selon vos besoins */
+  // background-color: rgb(16, 14, 161);
+  display: flex;
+  margin-right: 0.5rem;
+  align-items: center;
+}
+
+/* Styles pour .voyageur-input dans .voyageur-container */
+.voyageur-input {
+  flex-grow: 1; /* La zone rose s'étend pour remplir l'espace noir */
+  // background-color: lightpink;
+  border: none;
+  outline: none;
+
+  width: 64%; /* 60% de la largeur du conteneur noir */
+  height: 25.8%;
+}
+
+/* Styles pour .petite-loupe-container */
+.petite-loupe-container {
+  flex-grow: 1; /* La zone rose s'étend pour remplir l'espace noir */
+  height: 35px;
+  width: 35px; /* 60% de la largeur du conteneur noir */
+  border-radius: 50%;
+  background-color: #ff385c;
+  display: flex;
+  justify-content: center; /* Centrer horizontalement */
+  align-items: center; /* Centrer verticalement */
+}
+
+/* Styles pour .petite-loupe */
+.petite-loupe {
+  margin-left: 0.2rem;
+  width: 16px;
+  height: 16px;
+  background-color: #ff385c;
+}
+
+
+/* Styles pour le premier séparateur */
+.localisation-input::before {
+  left: 0;
+}
+
+/* Styles pour le deuxième séparateur */
+.voyageur-input::before {
+  left: 0;
+}
+
+/* Styles pour l'élément .account-bar-container */
+/* Styles pour l'élément .account-bar-container */
+.account-bar-container {
+width: 30%;
+height: 100%;
+display: flex;
+align-items: center;
+// background-color: lightgray;
+}
+
+/* Styles pour .account-input dans .account-bar-container */
+.account-input {
+width: 75%;
+height: 60%;
+display: flex;
+align-items: center; /* Centrer verticalement */
+}
+
+/* Styles pour .account-input-texte dans .account-input */
+.account-input-texte-container {
+width: 79%;
+height: 88%;
+margin-left: 0.2rem;
+display: flex; /* Ajout de display: flex; pour centrer le texte */
+justify-content: center; /* Centrer horizontalement */
+align-items: center; /* Centrer verticalement */
+}
+
+.account-input-texte {
+width: 95%;
+height: 38%;
+margin-left: 0.2rem;
+font-family: airbnbcereal_w_bdbold;
+font-weight: bolder;
+font-weight: 700;
+
+text-align: center;
+display: inline;
+}
+
+.little-planete-container{
+width: 46px;
+height: 42px;
+display: flex; /* Ajout de display: flex; pour centrer le texte */
+justify-content: center; /* Centrer horizontalement */
+align-items: center; /* Centrer verticalement */
+}
+
+/* Styles pour .barre-right-side */
+.barre-right-side {
+width: 20%;
+height: 51%;
+
+display: flex;
+align-items: center; /* Centrer verticalement */
+justify-content:space-evenly; /* Espacement équitable entre les éléments enfants */
+
+border: 1px solid #717171;
+border-radius: 40px;
+cursor: pointer;
+transition: box-shadow 0.3s;
+
+// padding: 0 1rem;
+// background-color: white;
 }
 
 /* Styles pour .listitem */
 .listitem {
-  display: flex;
-  align-items: center;
-  // align-items: flex-start;
+display: flex;
+align-items: center;
+// align-items: flex-start;
 }
 
 /* Styles pour .petitepersonne */
 .petitepersonne {
-  display: flex;
-  align-items: center;
-  // align-items: flex-end;
+display: flex;
+align-items: center;
+// align-items: flex-end;
 }
 
 /* Styles pour l'effet de survol de .account-input-texte */
 .account-input-texte-container:hover {
-  border-radius: 30px;
-  transition: box-shadow 0.3s;
-  box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.4);
+border-radius: 30px;
+transition: box-shadow 0.3s;
+box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.4);
 }
 .little-planete-container:hover {  
-  box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.4);
-  transition: box-shadow 0.3s;
-  border-radius: 30px;
+box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.4);
+transition: box-shadow 0.3s;
+border-radius: 30px;
 }
 .barre-right-side:hover{
-  box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.4);
-  transition: box-shadow 0.3s;
-  border-radius: 30px;
+box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.4);
+transition: box-shadow 0.3s;
+border-radius: 30px;
 }
 /* Style pour l'effet de survol global sur .search-bar-container */
 .search-bar-container:hover {
-  box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.4);
+box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.4);
 }
+
+/* Styles pour le menu caché des suggestions */
+
+/* Styles pour .ville-list */
+.ville-list {
+
+  list-style: none;
+  z-index: 3; /* Assurez-vous que le z-index de .ville-list est supérieur à celui de .suggestions */
+  position: absolute;
+  // margin-inline-start: 50px;
+  width: 463px;
+  background-color: red;
+  margin-top: 170px;
+  height: 200px;
+  border: 1px solid #717171;
+  border-radius: 25px;
+  padding: 0 1rem;
+  /* Définissez une hauteur maximale et ajoutez une barre de défilement si nécessaire */
+  max-height: 100px; /* Ajustez la hauteur maximale selon vos besoins */
+  overflow-y: auto;
+}
+
+.ville-list li {
+  // padding-right: 80%;
+  // padding: 50px 50px;
+  cursor: pointer;
+  transition: background-color 0.2s;
+  // background-color: #717171;
+
+}
+.ville-list li:hover {
+  background-color: #f5f5f5;
+}
+
+
