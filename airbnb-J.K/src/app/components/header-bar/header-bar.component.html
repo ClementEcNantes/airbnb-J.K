@@ -23,7 +23,9 @@
       </ul>
 
       <h1 *ngIf="selectedCity">
-        Ville choisie : {{ selectedCity.nom }}. Code postal : {{ selectedCity.codesPostaux[0] }}
+        <!-- Ville choisie : {{ selectedCity.nom }}. Code postal : {{ selectedCity.codesPostaux[0] }} -->
+        
+        {{selectedCity.nom }} {{selectedCity.codesPostaux[0]}}
       </h1>
       <input
         type="text"
