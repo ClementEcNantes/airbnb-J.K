@@ -6,5 +6,5 @@ import { Component } from '@angular/core';
   styleUrls: ['./app.component.scss']
 })
 export class AppComponent {
-  title = 'airbnb-J.K';
+  title = 'Locations saisonnières et locations en résidence - airbnb';
 }
