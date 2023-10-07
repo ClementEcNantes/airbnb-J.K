@@ -9,6 +9,10 @@ import { BodyCardComponent } from './components/body-card/body-card.component';
 
 import {HttpClientModule} from '@angular/common/http';
 import { UnderheaderComponent } from './components/underheader/underheader.component';
+import { FooterMapButtonComponent } from './components/footer-map-button/footer-map-button.component';
+import { DetailedFooterComponent } from './components/detailed-footer/detailed-footer.component';
+import { TriggerButtonComponent } from './components/trigger-button/trigger-button.component';
+import { FooterComponent } from './components/footer/footer.component';
 
 @NgModule({
   declarations: [
@@ -16,7 +20,11 @@ import { UnderheaderComponent } from './components/underheader/underheader.compo
     HeaderBarComponent,
     BodyCatalogComponent,
     BodyCardComponent,
-    UnderheaderComponent
+    UnderheaderComponent,
+    FooterMapButtonComponent,
+    DetailedFooterComponent,
+    TriggerButtonComponent,
+    FooterComponent
   ],
   imports: [
     BrowserModule,

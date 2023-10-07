@@ -1,0 +1,86 @@
+footer {
+    border: #bdbbbb 1px solid;
+    position: fixed;
+    bottom: 0;
+    width: 100%;
+    background: white;
+    text-align: center;
+    z-index: 100;
+
+    .simple-footer {
+        display: flex;
+        justify-content: space-between;
+        padding: 10px;
+
+        .left-footer {
+            display: flex;
+            width: 55%;
+            flex-direction: row;
+            flex-wrap: wrap;
+            padding-left: 2rem;
+
+            .left-text-container {
+                display:flex;
+                padding: 0.1rem;
+
+                .left-text {
+                    font-size: 0.85rem;
+                    color: rgb(62, 62, 62);
+                }
+
+                .text-separator {
+                    vertical-align: middle;
+                    align-items: center;
+                }
+            }
+        }
+
+        .right-footer {
+            display: flex;
+            flex-direction: row;
+            justify-content: space-evenly;
+            flex-wrap: wrap;
+            width: 40%;
+            align-items: center;
+
+            .right-text-container {
+                display: flex;
+                align-items: center;
+            }
+
+            .right-text {
+                margin-left: 0.25rem;
+                margin-right: 0.25rem;
+                padding: 0.1rem;
+                display: flex;
+                font-size: 0.85rem;
+                font-weight: bold;
+            }
+        }
+        
+        a:hover {
+            text-decoration: underline;
+        }
+    }
+
+    .detailed-footer {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        padding: 20px;
+
+        .column {
+            font-weight: normal;
+            list-style: none;
+
+            li:first-child {
+                font-weight: bold;
+            }
+        }
+    }
+}
+
+.left-text:hover,
+.right-text:hover {
+    text-decoration: underline;
+}
