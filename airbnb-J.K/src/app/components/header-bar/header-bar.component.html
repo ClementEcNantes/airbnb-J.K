@@ -11,12 +11,28 @@
   <div class="search-bar-space">
     <div class="search-bar-container">
       <input
+        (input)="onSearch($event)"
         type="text"
         class="localisation-input"
         placeholder="N'importe où"
+      />
+      
+      <!-- Liste des villes -->
+      <ul class="ville-list" *ngIf="showCityList">
+        <li (click)="onCityClick(ville)" *ngFor="let ville of villes$ | async">{{ ville.nom }}</li>
+      </ul>
+
+      <h1 *ngIf="selectedCity">
+        <!-- Ville choisie : {{ selectedCity.nom }}. Code postal : {{ selectedCity.codesPostaux[0] }} -->
+        
+        {{selectedCity.nom }} {{selectedCity.codesPostaux[0]}}
+      </h1>
+      <input
+        type="text"
+        class="date-input"
+        placeholder="Une semaine"
         disabled="disabled"
       />
-      <input type="text" class="date-input" placeholder="Une semaine" disabled="disabled" />
       <div class="voyageur-container">
         <input
           type="text"
