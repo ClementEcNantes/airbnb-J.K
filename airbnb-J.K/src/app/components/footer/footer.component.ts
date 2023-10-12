@@ -6,8 +6,10 @@ import { Component } from '@angular/core';
   styleUrls: ['./footer.component.scss']
 })
 export class FooterComponent {
+  // Variable pour contrôler la visibilité du pied de page détaillé
   isDetailedFooterVisible = false;
 
+  // Méthode pour basculer la visibilité du pied de page détaillé
   toggleDetailedFooter(): void {
     this.isDetailedFooterVisible = !this.isDetailedFooterVisible;
   }

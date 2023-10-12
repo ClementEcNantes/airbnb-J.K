@@ -1,4 +1,6 @@
+<!-- Barre de navigation -->
 <div class="header-bar">
+  <!-- Conteneur du logo -->
   <div class="logo-container">
     <img
       src="../../../assets/img/airbnb-logo-text.svg"
@@ -8,8 +10,11 @@
     />
   </div>
 
+  <!-- Espace de la barre de recherche -->
   <div class="search-bar-space">
+    <!-- Conteneur de la barre de recherche -->
     <div class="search-bar-container">
+      <!-- Champ de recherche de localisation -->
       <input
         (input)="onSearch($event)"
         type="text"
@@ -18,29 +23,37 @@
         (keydown.enter)="onEnterPress()"
       />
       
-      <!-- Liste des villes -->
+      <!-- Liste des villes (affichée conditionnellement) -->
       <ul class="ville-list" *ngIf="showCityList">
+        <!-- Éléments de la liste des villes -->
         <li (click)="onCityClick(ville)" *ngFor="let ville of villes$ | async">{{ ville.nom }}</li>
       </ul>
 
+      <!-- Titre affiché conditionnellement -->
       <h1 *ngIf="selectedCity">
-        <!-- Ville choisie : {{ selectedCity.nom }}. Code postal : {{ selectedCity.codesPostaux[0] }} -->
-        
+        <!-- Affichage des données de la ville choisie -->
         {{selectedCity.nom }} {{selectedCity.codesPostaux[0]}}
       </h1>
+
+      <!-- Champ de date (désactivé) -->
       <input
         type="text"
         class="date-input"
         placeholder="Une semaine"
         disabled="disabled"
       />
+
+      <!-- Conteneur des voyageurs -->
       <div class="voyageur-container">
+        <!-- Champ de recherche des voyageurs (désactivé) -->
         <input
           type="text"
           class="voyageur-input"
           placeholder="Ajouter des voyageurs"
           disabled="disabled"
         />
+
+        <!-- Conteneur de l'icône de la loupe -->
         <div class="petite-loupe-container">
           <div class="petite-loupe">
             <img src="../../../assets/img/petite loupe.svg" alt="Loupe" />
@@ -49,8 +62,12 @@
       </div>
     </div>
   </div>
+
+  <!-- Conteneur de la barre du compte utilisateur -->
   <div class="account-bar-container">
+    <!-- Conteneur de l'entrée du compte utilisateur -->
     <div class="account-input">
+      <!-- Conteneur du texte de l'entrée du compte utilisateur -->
       <div class="account-input-texte-container">
         <input
           class="account-input-texte"
@@ -61,6 +78,8 @@
           disabled="disabled"
         />
       </div>
+
+      <!-- Conteneur de l'icône de la planète -->
       <div class="little-planete-container">
         <img
           src="../../../assets/img/planete petite.svg"
@@ -71,7 +90,10 @@
         <div></div>
       </div>
     </div>
+
+    <!-- Conteneur de la barre de droite -->
     <div class="barre-right-side">
+      <!-- Icônes dans la barre de droite -->
       <img
         src="../../../assets/img/listroisbarres.svg"
         class="listitem"

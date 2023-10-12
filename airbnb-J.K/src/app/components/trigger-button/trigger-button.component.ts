@@ -1,4 +1,4 @@
-import { Component, Output, EventEmitter  } from '@angular/core';
+import { Component, Output, EventEmitter } from '@angular/core';
 
 @Component({
   selector: 'app-trigger-button',
@@ -8,7 +8,8 @@ import { Component, Output, EventEmitter  } from '@angular/core';
 export class TriggerButtonComponent {
   @Output() click = new EventEmitter<void>();
 
+  // Fonction déclenchée lorsqu'on clique sur le bouton
   onClick(): void {
-    this.click.emit();
+    this.click.emit(); // Émet un événement pour informer le composant parent
   }
 }

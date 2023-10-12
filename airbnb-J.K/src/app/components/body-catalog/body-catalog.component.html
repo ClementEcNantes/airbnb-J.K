@@ -1,7 +1,12 @@
+<!-- Conteneur du corps de la page -->
 <div class="body-container">
+    <!-- Utilisation d'Angular pour afficher les "cards" de manière asynchrone -->
     <ng-container *ngIf="cards$ | async as cards">
+        <!-- Boucle sur les "cards" à l'aide de *ngFor -->
         <div class="cards-container" *ngFor="let card of cards" class="card-item">
+            <!-- Afficher la "card" si aucune ville n'est sélectionnée ou si la ville de la "card" correspond à la ville sélectionnée -->
             <div *ngIf="!selectedCity || card.city_name === selectedCity.nom" class="cards-container card-item">
+                <!-- Utilisation d'un composant "app-body-card" pour afficher le contenu de la "card" -->
                 <app-body-card [accomodation]="card"></app-body-card>
             </div>
         </div>

@@ -13,6 +13,7 @@ import { FooterMapButtonComponent } from './components/footer-map-button/footer-
 import { DetailedFooterComponent } from './components/detailed-footer/detailed-footer.component';
 import { TriggerButtonComponent } from './components/trigger-button/trigger-button.component';
 import { FooterComponent } from './components/footer/footer.component';
+import { DetailsComponent } from './components/details/details.component';
 
 @NgModule({
   declarations: [
@@ -24,7 +25,8 @@ import { FooterComponent } from './components/footer/footer.component';
     FooterMapButtonComponent,
     DetailedFooterComponent,
     TriggerButtonComponent,
-    FooterComponent
+    FooterComponent,
+    DetailsComponent
   ],
   imports: [
     BrowserModule,

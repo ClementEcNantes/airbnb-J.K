@@ -1,19 +1,32 @@
 <div class="scroll-container">
+  <!-- Bouton de défilement vers la gauche -->
   <img class="scroll-button scroll-left" (click)="scrollLeft()" src="../../../assets/img/flèche gauche.svg" alt="Flèche Gauche" />
+
+  <!-- Conteneur de contenu défilant -->
   <div class="scroll-content" #container>
+    <!-- Liste de défilement -->
     <ul class="scroll-list" #content>
-      <!-- Vos éléments de défilement -->
+      <!-- Éléments de la liste -->
       <li *ngFor="let item of scrollItems">
+        <!-- Conteneur d'élément -->
         <div class="item-container">
+          <!-- Image de l'élément -->
           <img [src]="item.src" [width]="item.width" [height]="item.height">
+          <!-- Texte de l'élément -->
           <p class="item-text">planche</p>
         </div>
       </li>
     </ul>
   </div>
+
+  <!-- Bouton de défilement vers la droite -->
   <img class="scroll-button scroll-right" (click)="scrollRight()" src="../../../assets/img/flèche droite.svg" alt="Flèche Droite" />
+
+  <!-- Filtre -->
   <div class="filtre">
+    <!-- Icône de filtre -->
     <img src="../../../assets/img/filtre.svg" alt="filtre" />
+    <!-- Texte du filtre -->
     <span class="filtre-text">Filtres</span>
   </div>
 </div>

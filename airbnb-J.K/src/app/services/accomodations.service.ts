@@ -10,7 +10,9 @@ export class AccomodationsService {
 
   constructor(private http: HttpClient) {}
 
-  getAccomodations(){
+  // Méthode pour obtenir la liste des logements
+  getAccomodations() {
+    // Effectue une requête HTTP GET pour récupérer les logements depuis l'URL de base de l'API
     return this.http.get<Array<Logement>>(`${this.apiBaseUrl}`);
   }
 }

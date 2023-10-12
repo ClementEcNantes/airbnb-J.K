@@ -18,6 +18,8 @@ export class UnderheaderComponent {
 
   // Tableau d'éléments de la liste de défilement
   scrollItems: ScrollItem[] = [
+    // ... (liste d'éléments d'image)
+
     { src: 'https://a0.muscache.com/pictures/957f8022-dfd7-426c-99fd-77ed792f6d7a.jpg', width: 24, height: 24 },
     { src: 'https://a0.muscache.com/pictures/8a43b8c6-7eb4-421c-b3a9-1bd9fcb26622.jpg', width: 24, height: 24 },
     { src: 'https://a0.muscache.com/pictures/5cdb8451-8f75-4c5f-a17d-33ee228e3db8.jpg', width: 24, height: 24 },
@@ -47,12 +49,14 @@ export class UnderheaderComponent {
 
   constructor() {}
 
+  // Fonction pour faire défiler vers la gauche
   scrollLeft() {
     const itemWidth = this.calculateItemWidth();
     const targetPosition = this.scrollPosition - itemWidth * this.itemsPerScroll;
     this.scrollToPosition(targetPosition);
   }
 
+  // Fonction pour faire défiler vers la droite
   scrollRight() {
     const itemWidth = this.calculateItemWidth();
     const maxScroll = (this.scrollItems.length - Math.ceil(this.scrollItems.length / this.itemsPerScroll)) * itemWidth;
@@ -60,6 +64,7 @@ export class UnderheaderComponent {
     this.scrollToPosition(Math.min(targetPosition, maxScroll));
   }
 
+  // Fonction pour faire défiler vers une position cible
   scrollToPosition(targetPosition: number) {
     const step = 10; // Ajustez cette valeur pour modifier la vitesse du défilement
     if (this.animationFrameId !== -1) {
@@ -83,6 +88,7 @@ export class UnderheaderComponent {
     this.animationFrameId = requestAnimationFrame(animateScroll);
   }
 
+  // Fonction pour calculer la largeur d'un élément de la liste
   calculateItemWidth(): number {
     const containerWidth = this.container.nativeElement.clientWidth;
     return containerWidth / this.itemsPerScroll;

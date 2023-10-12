@@ -1,30 +1,39 @@
-<div class="card-container">
-    <div class="card-body">
+<div class="card-container" >
+    <div class="card-body" (click)="onCardClick()">
         <div class="thumbnail">
+            <!-- Icône "Coeur" pour ajouter ou retirer des favoris -->
             <div class="heart-container">
                 <svg id="heartIcon" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 32 32" aria-hidden="true" role="presentation" focusable="false" style="display: block; height: 26px; width: 26px; stroke-width: 2; overflow: visible; opacity: 1;" (click)="toggleLike()">
                     <path [attr.stroke-opacity]="accomodation.favourite ? '1' : '1'" [attr.fill-opacity]="accomodation.favourite ? '0.8' : '0.4'" [attr.fill]="isLiked ? 'red' : 'black'" [attr.stroke]="isLiked ? 'white' : 'white'" d="M16 28c7-4.73 14-10 14-17a6.98 6.98 0 0 0-7-7c-1.8 0-3.58.68-4.95 2.05L16 8.1l-2.05-2.05a6.98 6.98 0 0 0-9.9 0A6.98 6.98 0 0 0 2 11c0 7 7 12.27 14 17"></path>                              
                 </svg>                                  
             </div>
+            <!-- Image miniature de la carte -->
             <div class="image-crop" [style.background-image]="'url(' + imageWithPrefix + ')'" [style.backgroundSize]="backgroundSize"></div>
         </div>
+        <!-- Informations sur la localisation de la carte -->
         <div class="location-info-container">
             <div class="location-info">
                 <div>
                     <div class="location-name-container">
+                        <!-- Nom de la ville -->
                         <h1 class="location-name">{{accomodation.city_name}}</h1>
+                        <!-- Code postal de la ville -->
                         <h1 class="location-name-zipCode">, {{accomodation.city_zipCode}}</h1>
                     </div>
+                    <!-- Type de propriétaire (Particulier) -->
                     <h1 class="owner">Particulier</h1>
                 </div>
                 <div class="location-price">
+                    <!-- Prix par nuit -->
                     <h1 class="price-value">{{accomodation.price}} €</h1>
                     <h1 class="price-text">par nuit</h1>
                 </div>
             </div>
             <div class="location-rating">
                 <div class="location-rating-container">
+                    <!-- Icône d'évaluation en forme d'étoile -->
                     <img src="../../../assets/img/star.svg" class="star-img">
+                    <!-- Note de l'évaluation -->
                     <h1 class="rating-text">{{formattedRating}}</h1>
                 </div>
             </div>
