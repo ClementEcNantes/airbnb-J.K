@@ -16,15 +16,42 @@
     align-items: center;
     justify-content: center;
     gap: 10px;
-
+  
     &:hover {
-        background-color: rgba(0, 0, 0, 0.8);
-        transform: translateX(-50%) scale(1.1); // Grossissement de 10% lors du survol
+      background-color: rgba(0, 0, 0, 0.8);
+      transform: translateX(-50%) scale(1.1);
     }
-
+  
     .map-icon {
-        height: 16px;
-        width: 16px;
-        fill: white;
+      height: 16px;
+      width: 16px;
+      fill: white;
     }
-}
+  }
+  
+  .map-container {
+    display: none;
+    position: fixed;
+    z-index: 5;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    margin: 30px;
+    padding: 15px 20px;
+  
+    .map-frame {
+      border: 2px solid black;
+      height: 100%;
+      width: 100%;
+  
+      #map {
+        height: 100%;
+      }
+    }
+  
+    &.map-visible {
+      display: block;
+    }
+  }
+  

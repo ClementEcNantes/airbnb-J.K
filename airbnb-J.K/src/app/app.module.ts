@@ -14,6 +14,8 @@ import { DetailedFooterComponent } from './components/detailed-footer/detailed-f
 import { TriggerButtonComponent } from './components/trigger-button/trigger-button.component';
 import { FooterComponent } from './components/footer/footer.component';
 import { DetailsComponent } from './components/details/details.component';
+import { LeafletModule } from '@asymmetrik/ngx-leaflet' ;
+
 
 @NgModule({
   declarations: [
@@ -31,7 +33,8 @@ import { DetailsComponent } from './components/details/details.component';
   imports: [
     BrowserModule,
     AppRoutingModule,
-    HttpClientModule
+    HttpClientModule,
+    LeafletModule
   ],
   providers: [],
   bootstrap: [AppComponent]
