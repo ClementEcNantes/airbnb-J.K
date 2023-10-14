@@ -1,11 +1,15 @@
-<div class="details-container">
-    <h1 class="location-name">{{accomodation.city_name}}, {{accomodation.city_zipCode}}</h1>
-    <h1 class="owner">Particulier</h1>
-    <h1 class="price-value">{{accomodation.price}} €</h1>
-    <h1 class="price-text">par nuit</h1>
-    <div class="location-rating-container">
-      <img src="../../../assets/img/star.svg" class="star-img">
-      <h1 class="rating-text">{{accomodation.rating.toLocaleString('fr-FR', { maximumFractionDigits: 1 })}}</h1>
+<div class="main-container">
+  <ng-container *ngIf="accommodation$ | async as accommodation">
+    <div class="logement">
+      <div class="logement-image" [style.background-image]="'url( ' + imageWithPrefix + ')'" [style.backgroundSize]="backgroundSize"></div>
+      <div class="logement-info">
+          <h1 class="logement-name">{{accommodation.city_name}}</h1>
+          <h1 class="logement-zip">{{accommodation.city_zipCode}}</h1>
+          <h1 class="logement-price">{{accommodation.price | currency:'EUR'}}</h1>
+          <div class="logement-rating">
+              <span *ngFor="let r of [].constructor(accommodation.rating); let i = index" class="star">&#9733;</span>
+          </div>
+      </div>
     </div>
-  </div>
-  
+  </ng-container>
+</div>

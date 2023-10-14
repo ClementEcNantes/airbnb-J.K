@@ -15,4 +15,8 @@ export class AccomodationsService {
     // Effectue une requête HTTP GET pour récupérer les logements depuis l'URL de base de l'API
     return this.http.get<Array<Logement>>(`${this.apiBaseUrl}`);
   }
+
+  getLogement(id: string | undefined){
+    return this.http.get<Logement>(`${this.apiBaseUrl}${id}`);
+  }
 }
