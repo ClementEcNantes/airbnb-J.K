@@ -10,43 +10,45 @@ import { CitySearchService } from 'src/app/services/city-search.service';
 })
 export class HeaderBarComponent {
 
-  searchTerm: string = ''; // Terme de recherche entré par l'utilisateur
-  communes: Commune[] = []; // Liste des communes
-  selectedCity: Commune | null = null; // Ville sélectionnée
-  villes$: Observable<Commune[]> | null = null; // Observable des villes
-  showSuggestions: boolean = false; // Indicateur pour afficher ou non les suggestions
-  showCityList: boolean = false; // Indicateur pour afficher ou non la liste des villes
+  searchTerm: string = '';
+  communes: Commune[] = [];
+  selectedCity: Commune | null = null;
+  villes$: Observable<Commune[]> | null = null;
+  showSuggestions: boolean = false;
+  showCityList: boolean = false;
+  menuVisible: boolean = false; // Variable pour contrôler la visibilité du menu déroulant
 
-  // Injection des services ApigouvService et CitySearchService dans le constructeur
   constructor(private apigouvService: ApigouvService, private CitySearchService: CitySearchService) { }
 
-  // Méthode appelée lors de la recherche
-  public onSearch(event: Event): void {
+  onSearch(event: Event): void {
     const searchTerm = (event.target as HTMLInputElement).value;
 
-    // Si le terme de recherche contient au moins 3 caractères
     if (searchTerm.length >= 3) {
-      this.showSuggestions = true; // Afficher les suggestions
-      this.villes$ = this.apigouvService.searchCommunes(searchTerm); // Rechercher les communes
-      this.showCityList = true; // Afficher la liste des villes
+      this.showSuggestions = true;
+      this.villes$ = this.apigouvService.searchCommunes(searchTerm);
+      this.showCityList = true;
     } else {
-      this.showSuggestions = false; // Masquer les suggestions
-      this.showCityList = false; // Masquer la liste des villes
+      this.showSuggestions = false;
+      this.showCityList = false;
     }
 
-    this.selectedCity = null; // Réinitialiser la ville sélectionnée
+    this.selectedCity = null;
   }
 
-  // Méthode appelée lors du clic sur une ville
-  public onCityClick(ville: Commune): void {
-    this.selectedCity = ville; // Définir la ville sélectionnée
-    this.showSuggestions = false; // Masquer les suggestions
-    this.CitySearchService.selectCity(ville); // Sélectionner la ville
-    this.showCityList = false; // Masquer la liste des villes
+  onCityClick(ville: Commune): void {
+    this.selectedCity = ville;
+    this.showSuggestions = false;
+    this.CitySearchService.selectCity(ville);
+    this.showCityList = false;
   }
 
-  // Méthode appelée lors de l'appui sur la touche Entrée
   onEnterPress(): void {
-    this.CitySearchService.selectCity(null); // Sélectionner aucune ville
+    this.CitySearchService.selectCity(null);
+  }
+
+  // Méthode pour basculer la visibilité du menu déroulant
+  toggleMenu() {
+    console.log('toggleMenu');
+    this.menuVisible = !this.menuVisible;
   }
 }

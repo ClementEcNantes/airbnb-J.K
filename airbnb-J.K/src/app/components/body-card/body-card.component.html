@@ -1,5 +1,5 @@
 <div class="card-container" >
-    <div class="card-body" (click)="onCardClick()">
+    <div class="card-body" >
         <div class="thumbnail">
             <!-- Icône "Coeur" pour ajouter ou retirer des favoris -->
             <div class="heart-container">
@@ -8,7 +8,7 @@
                 </svg>                                  
             </div>
             <!-- Image miniature de la carte -->
-            <div class="image-crop" [style.background-image]="'url(' + imageWithPrefix + ')'" [style.backgroundSize]="backgroundSize"></div>
+            <div class="image-crop" [style.background-image]="'url(' + imageWithPrefix + ')'" [style.backgroundSize]="backgroundSize" (click)="onCardClick()"></div>
         </div>
         <!-- Informations sur la localisation de la carte -->
         <div class="location-info-container">

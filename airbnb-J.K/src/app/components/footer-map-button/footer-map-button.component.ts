@@ -1,4 +1,4 @@
-import { Component } from '@angular/core';
+import { Component, AfterViewInit  } from '@angular/core';
 import * as L from 'leaflet';
 
 @Component({
@@ -6,7 +6,7 @@ import * as L from 'leaflet';
   templateUrl: './footer-map-button.component.html',
   styleUrls: ['./footer-map-button.component.scss'],
 })
-export class FooterMapButtonComponent {
+export class FooterMapButtonComponent implements AfterViewInit{
   private map: any;
   isMapVisible = false;
 
@@ -17,18 +17,20 @@ export class FooterMapButtonComponent {
     });
 
     const tiles = L.tileLayer('https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png', {
-      maxZoom: 18,
+      maxZoom: 5,
       minZoom: 3,
-      attribution: '&copy; <a href="http://www.openstreetmap.org/copyright">OpenStreetMap</a>',
+      attribution: '&copy; <a href="http://www.openstreetmap.org/copyright">OpenStreetMap</a>'
     });
     tiles.addTo(this.map);
   }
 
+  constructor() { }
+
+  ngAfterViewInit(): void {
+    this.initMap();
+  }
+
   toggleMap() {
     this.isMapVisible = !this.isMapVisible;
-    if (this.isMapVisible) {
-      this.initMap();
-    }
   }
-  
 }

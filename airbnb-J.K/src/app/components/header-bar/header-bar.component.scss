@@ -216,6 +216,52 @@ transition: box-shadow 0.3s;
 // background-color: white;
 }
 
+/* Styles pour le menu déroulant */
+.dropdown-menu {
+  position: absolute;
+  z-index: 2000;
+
+  right: 0;
+  margin-top: 270px;
+  margin-right: 80px;
+  height: 201px;
+  width: 243px;
+  background-color: white;
+  border: 1px solid #bdbbbb;
+  border-radius: 10px;
+  box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.2);
+
+}
+
+/* Styles pour la liste d'éléments du menu */
+.menu-list {
+  position: absolute;
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.menu-list li {
+  margin-top: 1rem;
+  margin-left: 1rem;
+  margin-bottom: 20px; /* Ajoutez un espace entre chaque élément de la liste */
+  transition: background-color 0.3s; /* Ajoutez une transition pour l'effet de survol */
+}
+
+/* Styles pour les liens du menu */
+.menu-list li a {
+  text-decoration: none;
+  color: #333; /* Couleur du texte */
+  display: block;
+  transition: color 0.3s;
+}
+
+/* Styles pour les éléments li au survol */
+.menu-list li:hover {
+  background-color: #f5f5f5; /* Couleur de fond au survol */
+}
+
+
 /* Styles pour .listitem */
 .listitem {
 display: flex;
@@ -283,7 +329,10 @@ box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.4);
 
 }
 .ville-list li:hover {
-  background-color: #f5f5f5;
+  background-color: #717171;
+  border-radius: 30px;
+  transition: box-shadow 0.3s;
+  box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.4);
 }
 
 

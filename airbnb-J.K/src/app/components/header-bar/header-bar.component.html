@@ -92,7 +92,7 @@
     </div>
 
     <!-- Conteneur de la barre de droite -->
-    <div class="barre-right-side">
+    <div class="barre-right-side" (click)="toggleMenu()">
       <!-- Icônes dans la barre de droite -->
       <img
         src="../../../assets/img/listroisbarres.svg"
@@ -106,6 +106,15 @@
         height="28.69"
         width="28.69"
       />
+    </div>
+
+    <div *ngIf="menuVisible" class="dropdown-menu">
+      <ul class="menu-list">
+        <li><a href="#">Inscription</a></li>
+        <li><a href="#">Connexion</a></li>
+        <li><a href="#">Mettre mon logement sur Airbnb</a></li>
+        <li><a href="#">Centre d'aide</a></li>
+      </ul>
     </div>
   </div>
 </div>
